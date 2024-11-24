@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu amor Por você</title>
+    <!-- Importando a fonte do Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <style>
+        /* Estilo geral do corpo */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.85); /* Preto com leve transparência */
+            min-height: 100vh; /* Define altura mínima, permitindo rolagem */
+            overflow-y: auto; /* Habilita rolagem vertical */
+        }
+
+        /* Container do slideshow */
+        #slideshow {
+            display: flex;
+            overflow: hidden;
+            width: 90%; /* Ajusta a largura para caber em telas menores */
+            height: 300px;
+            margin-bottom: 20px; /* Espaçamento abaixo do slideshow */
+            margin-top: 30px; /* Espaçamento acima do slideshow */
+            border-radius: 10px;
+        }
+
+        #slideshow img {
+            width: 100%;
+            height: auto;
+            animation: slide 08s infinite;
+        }
+
+        /* Animação do slideshow */
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Estilo do título */
+        #title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3em;
+            color: red;
+            margin: 20px 0 10px; /* Espaçamento acima e abaixo do título */
+        }
+
+        /* Estilo da homenagem */
+        #homenagem {
+            font-size: 1.2em; /* Tamanho da fonte */
+            font-style: italic;
+            color: #FFD700; /* Cor do texto */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            max-width: 50%; /* Largura máxima para evitar que o texto ocupe toda a tela */
+            margin: 0 auto 20px; /* Centraliza e adiciona espaço abaixo */
+            text-align: justify; /* Justifica o texto */
+            text-align-last: center; /* Centraliza a última linha */
+        }
+
+        /* Estilo do subtítulo */
+        #subtitulo {
+            font-size: 2em;
+            font-family: 'Great Vibes', cursive;
+            color: rgb(252, 252, 255);
+            word-spacing: 0.3em;
+            margin-top: 50px;
+            margin-bottom: 20px; /* Espaçamento abaixo do subtítulo */
+        }
+
+        /* Container do contador */
+        #contador {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Define duas colunas */
+            grid-gap: 15px; /* Espaçamento entre os blocos do contador */
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 70px;
+            margin-top: 30px; /* Espaçamento acima do contador */
+        }
+
+        #contador div {
+            background: red; /* Fundo preto */
+            color: white; /* Texto branco */
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-family: 'Great Vibes', cursive;
+        }
+
+        #contador div span {
+            display: block;
+            font-size: 40px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Vídeo de fundo removido -->
+
+    <div id="slideshow">
+        <img src="imagens/minha foto.jpg" alt="Foto 1">
+        <img src="imagens/foto2.jpg" alt="Foto 2">
+        <img src="imagens/foto3.jpg" alt="Foto 3">
+        <img src="imagens/foto4.jpg" alt="Foto 4">
+        <img src="imagens/foto2.jpg" alt="Foto 2">
+        <img src="imagens/foto3.jpg" alt="Foto 3">
+        <img src="imagens/foto4.jpg" alt="Foto 4">
+        <img src="imagens/foto2.jpg" alt="Foto 2">
+        <img src="imagens/foto3.jpg" alt="Foto 3">
+        <img src="imagens/foto4.jpg" alt="Foto 4">
+    </div>
+    
+    <div id="title">Rick e Nadiele</div>
+
+    <div id="homenagem">
+        "Amo-te mais que tudo, meu amor. Sempre te terei na minha mente e no meu coração. Te amo, Nadiele. Estou ao seu lado para o que der e vier, e desejo que o nosso amor cresça cada dia mais, com muita paz, carinho e compreensão. Que o nosso futuro seja repleto de realizações, sonhos, e conquistas juntos. Você é o amor da minha vida e eu quero compartilhar cada momento ao seu lado, enfrentando as alegrias e dificuldades da vida de mãos dadas."
+    </div>
+
+    <div id="subtitulo">
+        "Juntos há"
+    </div>
+
+    <div id="contador">
+        <div><span id="anos">00</span> anos</div>
+        <div><span id="meses">00</span> meses</div>
+        <div><span id="dias">00</span> dias</div>
+        <div><span id="horas">00</span> horas</div>
+        <div><span id="minutos">00</span> minutos</div>
+        <div><span id="segundos">00</span> segundos</div>
+    </div>
+
+    <audio id="audio" loop>
+        <source src="Musicas/leao.mp3" type="audio/mp3">
+        Seu navegador não suporta áudio.
+    </audio>
+    <script>
+        document.body.addEventListener('click', function() {
+            const audio = document.getElementById('audio');
+            audio.play();
+        }, { once: true }); // Garante que o evento só será executado uma vez
+    </script>
+    
+    
+
+    <script>
+function atualizarContador() {
+    const inicio = new Date("2022-11-31T00:00:00"); // Data de início ajustada
+    const agora = new Date();
+    const diff = agora - inicio;
+
+    const anos = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+    const meses = Math.floor((diff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30.44)); // Média de dias por mês
+    const dias = Math.floor((diff % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("anos").textContent = anos.toString().padStart(2, '0');
+    document.getElementById("meses").textContent = meses.toString().padStart(2, '0');
+    document.getElementById("dias").textContent = dias.toString().padStart(2, '0');
+    document.getElementById("horas").textContent = horas.toString().padStart(2, '0');
+    document.getElementById("minutos").textContent = minutos.toString().padStart(2, '0');
+    document.getElementById("segundos").textContent = segundos.toString().padStart(2, '0');
+}
+
+setInterval(atualizarContador, 1000);
+atualizarContador();
+
+    </script>
+</body>
+</html>
