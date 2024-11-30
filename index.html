@@ -22,31 +22,33 @@
             overflow-y: auto; /* Habilita rolagem vertical */
         }
 
-        /* Container do slideshow */
         #slideshow {
-            display: flex;
-            overflow: hidden;
-            width: 90%; /* Ajusta a largura para caber em telas menores */
-            height: 300px;
-            margin-bottom: 20px; /* Espaçamento abaixo do slideshow */
-            margin-top: 30px; /* Espaçamento acima do slideshow */
-            border-radius: 10px;
-        }
+    display: flex;
+    overflow: hidden;
+    width: 100%; /* Ajusta a largura para caber em telas menores */
+    height: 300px;
+    margin-top: 80px; /* Espaçamento acima do slideshow */
+    margin-bottom: 20px; /* Espaçamento abaixo do slideshow */
+    border-radius: 10px;
+}
 
-        #slideshow img {
-            width: 100%;
-            height: auto;
-            animation: slide 08s infinite;
-        }
+#slideshow img {
+    flex-shrink: 0;
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+    animation: slide 07s infinite;
+}
 
-        /* Animação do slideshow */
-        @keyframes slide {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(-100%); }
-            50% { transform: translateX(-200%); }
-            75% { transform: translateX(-300%); }
-            100% { transform: translateX(0); }
-        }
+@keyframes slide {
+    0%, 100% { transform: translateX(0); }
+    16.6% { transform: translateX(-100%); }
+            33.3% { transform: translateX(-200%); }
+            50% { transform: translateX(-300%); }
+            66.6% { transform: translateX(-400%); }
+            83.3% { transform: translateX(-500%); }
+}
+
 
         /* Estilo do título */
         #title {
@@ -110,22 +112,37 @@
     <!-- Vídeo de fundo removido -->
 
     <div id="slideshow">
-        <img src="imagens/minha foto.jpg" alt="Foto 1">
-        <img src="imagens/foto2.jpg" alt="Foto 2">
-        <img src="imagens/foto3.jpg" alt="Foto 3">
-        <img src="imagens/foto4.jpg" alt="Foto 4">
-        <img src="imagens/foto2.jpg" alt="Foto 2">
-        <img src="imagens/foto3.jpg" alt="Foto 3">
-        <img src="imagens/foto4.jpg" alt="Foto 4">
-        <img src="imagens/foto2.jpg" alt="Foto 2">
-        <img src="imagens/foto3.jpg" alt="Foto 3">
-        <img src="imagens/foto4.jpg" alt="Foto 4">
+        <img src="imagens/amor 26.jpg" alt="Foto 1">
+        <img src="imagens/amor 19.jpg" alt="Foto 2">
+        <img src="imagens/amor 22.jpg" alt="Foto 3">
+        <img src="imagens/amor 16.jpg" alt="Foto 4">
+        <img src="imagens/amor 13.jpg" alt="Foto 2">
+        <img src="imagens/amor 17.jpg" alt="Foto 3">
+        <img src="imagens/amor 19.jpg" alt="Foto 4">
+        <img src="imagens/amor 22.jpg" alt="Foto 2">
+        <img src="imagens/amor 25.jpg" alt="Foto 2">
+        
+        
     </div>
     
     <div id="title">Rick e Nadiele</div>
 
     <div id="homenagem">
-        "Amo-te mais que tudo, meu amor. Sempre te terei na minha mente e no meu coração. Te amo, Nadiele. Estou ao seu lado para o que der e vier, e desejo que o nosso amor cresça cada dia mais, com muita paz, carinho e compreensão. Que o nosso futuro seja repleto de realizações, sonhos, e conquistas juntos. Você é o amor da minha vida e eu quero compartilhar cada momento ao seu lado, enfrentando as alegrias e dificuldades da vida de mãos dadas."
+        "Hoje completamos dois anos juntos. Já passamos por muita coisa, momentos incríveis que eu nunca pensei em viver.
+
+Senti muito a sua falta durante os anos em que não a via. Sempre tive vontade de ter minha primeira vez com você, de viver com você... mas também tinha muito medo de perdê-la e nunca mais poder vê-la novamente.
+
+Deus sabe o que faz. Alguns anos se passaram, e cá estamos novamente juntos, completando dois anos hoje. Pensei muito no que poderia dar a você, em algo único que você pudesse guardar para sempre. Você merece tanta coisa, meu amor. Nem tenho palavras para expressar o quanto você merece. Mas, por enquanto, já ganhou a mim (risos).
+
+Durante esses dois anos, fui aprendendo coisas e melhorando em outras. Sei que cometi alguns erros, mas faço tudo o que for possível para não perdê-la. Minha evolução hoje é graças a você.
+
+Deus realmente sabe o que faz, e olhe só onde estou. Quem diria que eu chegaria tão longe? Por isso dizem que, atrás de um grande homem, sempre há uma grande mulher. E é você quem me faz ser quem eu sou hoje.
+
+Me perdoe pelos meus erros. Prometo melhorar. Com fé em Deus e você ao meu lado, tenho certeza de que vamos viver uma linda vida juntos e construir nossa família. Ainda não posso casar, mas saiba que, um dia, eu realmente vou casar com você. Antes disso, preciso me tornar o homem que você sempre poderá contar. Preciso ser um bom homem para ser um ótimo marido e, futuramente, um pai maravilhoso.
+
+Se eu fosse definir nosso relacionamento em personagens de desenho, eu seria o Homer, e você, a Marge. Quem conhece já sabe, né?
+
+Te amo, amor. Muito feliz aniversário de namoro!"
     </div>
 
     <div id="subtitulo">
