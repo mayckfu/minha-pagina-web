@@ -64,12 +64,18 @@
             font-style: italic;
             color: #FFD700; /* Cor do texto */
             line-height: 1.5; /* Espaçamento entre linhas */
-            max-width: 50%; /* Largura máxima para evitar que o texto ocupe toda a tela */
+            max-width: 80%; /* Largura máxima para evitar que o texto ocupe toda a tela */
             margin: 0 auto 20px; /* Centraliza e adiciona espaço abaixo */
             text-align: justify; /* Justifica o texto */
             text-align-last: center; /* Centraliza a última linha */
         }
-
+        @media (max-width: 600px) {
+            #homenagem {
+                font-size: 1em;
+                max-width: 95%;
+                padding: 0%;
+            }
+        }
         /* Estilo do subtítulo */
         #subtitulo {
             font-size: 2em;
